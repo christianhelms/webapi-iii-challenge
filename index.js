@@ -1,11 +1,6 @@
-const express = require('express');
+const server = require('./server');
 
-const postsRouter = require('./posts/postRouter.js');
-
-const server = express();
-
-server.use(express.json());
-
-server.use('/api/posts', postsRouter);
-
-server.listen(8000, () => console.log('\nAPI running\n'));
+const port = 8000;
+server.listen(port, () =>
+  console.log(`\n listening on port http://localhost:${port} \n`),
+);

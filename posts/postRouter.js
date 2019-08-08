@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const Posts = require("../data/db");
 
 router.get("/", (req, res) => {
   Posts.find()
